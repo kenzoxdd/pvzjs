@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		img{
+			width: 100px;
+			position: absolute;
+			display:none;
+		}
+		.x{
+
+		}
+	</style>
+</head>
+<body>
+	<div style="background-image: url(game.png); height: 1000px; background-size: 100% 100%">
+			<img class="fll" src="sunflower.png" style="position:absolute; display:block; margin-left:25%;">
+			<img class="pshoot" src="peashooter.png" style="position:absolute; display:block; margin-left:18%; margin-top: 1%;">
+		<!--цветы 1 ряд-->
+		<img class="flower" src="sunflower.png"  style=" margin-left: 33%; margin-top: 13%;">
+		<img class="flower" src="sunflower.png"  style=" margin-left: 33%; margin-top: 19%;">
+		<img class="flower" src="sunflower.png"  style=" margin-left: 33%; margin-top: 25%;">
+		<img class="flower" src="sunflower.png"  style=" margin-left: 33%; margin-top: 31%;">
+		<img class="flower" src="sunflower.png"  style=" margin-left: 33%; margin-top: 37%;">
+		<button class="flwbtn" style="color: yellow; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 17%; ">PLANT</button>
+		<button class="flwbtn" style="color: yellow; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 23%; ">PLANT</button>
+		<button class="flwbtn" style="color: yellow; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 29%; ">PLANT</button>
+		<button class="flwbtn" style="color: yellow; font-weight: bold; position: absolute;  margin-left: 33%; margin-top: 35%; ">PLANT</button>
+		<button class="flwbtn" style="color: yellow; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 41%; ">PLANT</button>
+
+		<!--цветы 2 ряд-->
+		<img class="gorox" src="peashooter.png"  style=" margin-left: 40%; margin-top: 13%; ">
+		<img class="gorox" src="peashooter.png"  style=" margin-left: 40%; margin-top: 19%; ">
+		<img class="gorox" src="peashooter.png"  style=" margin-left: 40%; margin-top: 25%; ">
+		<img class="gorox" src="peashooter.png"  style=" margin-left: 40%; margin-top: 31%; ">
+		<img class="gorox" src="peashooter.png"  style=" margin-left: 40%; margin-top: 37%; ">
+		<button class="flwbtn" style="color: green; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 17%; ">PLANT</button>	
+		<button class="flwbtn" style="color: green; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 23%; ">PLANT</button>
+		<button class="flwbtn" style="color: green; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 29%; ">PLANT</button>
+		<button class="flwbtn" style="color: green; font-weight: bold; position: absolute;  margin-left: 40%; margin-top: 35%; ">PLANT</button>
+		<button class="flwbtn" style="color: green; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 41%; ">PLANT</button>
+
+
+<script>
+	let odin = 0
+	let knopki = document.querySelectorAll(".flwbtn")
+	let flower = document.querySelectorAll(".flower")
+	let gorox = document.querySelectorAll(".gorox")
+
+document.querySelector(".fll").onclick = function(){
+	flower[0].style.height = "200px";
+	flower[1].style.height = "200px";
+	flower[2].style.height = "200px";
+	flower[3].style.height = "200px";
+	flower[4].style.height = "200px";
+}
+document.querySelector(".pshoot").onclick = function(){
+	gorox[odin].style.height = "200px";
+	odin = odin + 1
+	
+}
+document.querySelector(".pshoot").onclick = function(){
+	gorox[odin].style.height = "200px";
+	odin = odin + 1
+	document.querySelector(".gorox").innerHTML = odin
+}
+document.querySelector(".pshoot").onclick = function(){
+	gorox[odin].style.height = "200px";
+	odin = odin + 1
+	document.querySelector(".gorox").innerHTML = odin
+}
+document.querySelector(".pshoot").onclick = function(){
+	gorox[odin].style.height = "200px";
+	odin = odin + 1
+	document.querySelector(".gorox").innerHTML = odin
+}
+document.querySelector(".pshoot").onclick = function(){
+	
+	for(let index = 0; index<5; index = index + 1){
+		gorox[index].style.height = "200px";
+	}
+	document.querySelector(".gorox").innerHTML = odin
+}
+
+
+
+
+
+knopki[0].onclick = function(){
+	flower[0].style.display = "block";
+	knopki[0].style.display = "none";
+}
+knopki[1].onclick = function(){
+	flower[1].style.display = "block";
+	knopki[1].style.display = "none";
+}
+knopki[2].onclick = function(){
+	flower[2].style.display = "block";
+	knopki[2].style.display = "none";
+}
+knopki[3].onclick = function(){
+	flower[3].style.display = "block";
+	knopki[3].style.display = "none";
+}
+knopki[4].onclick = function(){
+	flower[4].style.display = "block";
+	knopki[4].style.display = "none";
+}
+knopki[5].onclick = function(){
+	gorox[0].style.display = "block";
+	knopki[5].style.display = "none";
+}
+knopki[6].onclick = function(){
+	gorox[1].style.display = "block";
+	knopki[6].style.display = "none";
+}
+knopki[7].onclick = function(){
+	gorox[2].style.display = "block";
+	knopki[7].style.display = "none";
+}
+knopki[8].onclick = function(){
+	gorox[3].style.display = "block";
+	knopki[8].style.display = "none";
+}
+knopki[9].onclick = function(){
+	gorox[4].style.display = "block";
+	knopki[9].style.display = "none";
+}
+
+</script>
+</body>
+</html>
